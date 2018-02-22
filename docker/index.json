@@ -2,14 +2,14 @@
   "title": "Docker Workshop",
   "description": "Docker Workshop",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Deployment",
+      "title": "Step 1 - Deploying Node.js",
       "text": "step1.md"
     },
     {
-      "title": "Step 2 - Containerization",
+      "title": "Step 2 - Containerizing Node.js",
       "text": "step2.md"
     }],
     "intro": {
@@ -21,8 +21,10 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "showdashboard": true,
+    "dashboards": [{"name": "Node.js app", "port": 3000}, {"name": "Dockerized Node.js app", "port": 8080}],
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "docker-node"

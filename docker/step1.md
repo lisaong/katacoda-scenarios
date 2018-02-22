@@ -17,12 +17,3 @@ In this step, you will clone, deploy, and run a Node.js application.
 `node main.js`{{execute}}
 
 The application will be listening on port 3000.
-
-#### Test the Node application
-
-The machine name Docker is running on is called docker. If you want to access any of the services then use docker instead of localhost or 0.0.0.0.
-
-`curl http://docker:3000`{{execute}}
-
-#### Protip
-You can usually list the command options for each tool. Try `git`{{execute}} or `node`{{execute}}.
