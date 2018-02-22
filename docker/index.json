@@ -22,7 +22,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "Node.js app", "port": 3000}, {"name": "Dockerized Node.js app", "port": 8080}],
+    "dashboards": [{"name": "Node app", "port": 3000, "host": "client01"}, {"name": "Docker app", "port": 8080, "host": "client01"}],
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
   },
