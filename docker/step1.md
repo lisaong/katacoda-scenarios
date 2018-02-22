@@ -16,4 +16,5 @@ In this step, you will clone, deploy, and run a Node.js application.
 
 `node main.js`{{execute}}
 
-The application will be listening on port 3000.
+The application will be listening on port 3000. You can visit it via the URL:
+https://[[CLIENT_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
