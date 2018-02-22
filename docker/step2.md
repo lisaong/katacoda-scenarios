@@ -4,9 +4,15 @@ In this step, you will containerize the Node.js application.
 
 In the terminal window, do `Ctrl+C` to stop the node process. Instead, we will walk through how to run the same application in a container.
 
+#### Create a new Dockerfile
+
+First, create an empty Dockerfile:
+
+`touch Dockerfile`{{execute}}
+
 #### Author the Dockerfile
 
-In the editor window, select `Dockerfile` and open it to fill it out for the application.
+In the top window, click the Refresh button (circular double arrows) to refresh the folder view. Expand the `acd_docker_workshop` folder, select `Dockerfile` and click on it to open in the built-in editor.
 
 You can use this as a starting point:
 
@@ -19,6 +25,8 @@ FROM node:9.5.0
 # Install dependencies
 
 </pre>
+
+Note that you don't have to click Save, the editor will automatically save the file.
 
 #### Create the docker image
 
