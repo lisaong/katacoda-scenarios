@@ -2,7 +2,7 @@
   "title": "Docker Workshop",
   "description": "Docker Workshop",
   "difficulty": "beginner",
-  "time": "10 minutes",
+  "time": "20 minutes",
   "details": {
     "steps": [{
       "title": "Step 1 - Deploying Node.js",
@@ -21,8 +21,9 @@
     }
   },
   "environment": {
+    "icon": "fa-docker",
     "uilayout": "editor-terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal to learn and execute commands.\u001b[m\r\n"
   },
   "backend": {
     "imageid": "docker-node"
