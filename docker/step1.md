@@ -1,7 +1,22 @@
-This is your first step.
+In this step, you will clone, deploy, and run a Node.js application.
 
-## Task
+#### Clone the application from its repository
 
-This is an _example_ of creating a scenario and running a **command**
+`git clone https://github.com/chukmunnlee/acd_docker_workshop.git`{{execute}}
 
-`echo 'Hello World'`{{execute}}
+#### Change into the repository directory
+
+`cd acd_docker_workshop`{{execute}}
+
+#### Install the required dependencies
+
+`npm install`{{execute}}
+
+#### Run the Node application
+
+`node main.js`{{execute}}
+
+The application will be listening on port 3000.
+
+#### Protip
+You can usually list the command options for each tool. Try `git`{{execute}} or `node`{{execute}}.
