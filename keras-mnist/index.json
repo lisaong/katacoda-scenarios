@@ -1,19 +1,16 @@
 {
     "title": "Deepschool.io - Keras Neural Nets",
-    "description": "This scenario explains the classification of handwritten digits using **Keras** with a **Tensorflow** backend.",
+    "description": "This scenario demonstrates Neural Networks using Keras.",
     "details": {
         "steps": [
             {
-                "title": "Installing Keras",
+                "title": "Running the Jupyter notebook",
                 "text": "step1.md"
-            },
-            {
-                "title": "Running Jupyter notebook",
-                "text": "step2.md"
             }
         ],
         "intro": {
             "text": "intro.md",
+            "courseData": "courseBase.sh",
             "credits": ""
         },
         "finish": {
@@ -24,6 +21,8 @@
         "imageid": "docker"
     },
     "environment": {
+        "showdashboard": true,
+        "dashboard": "Jupyter",
         "uilayout": "terminal-iframe"
     }
 }
