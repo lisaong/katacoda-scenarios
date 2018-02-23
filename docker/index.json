@@ -22,14 +22,13 @@
   },
   "environment": {
     "icon": "fa-docker",
-    "uilayout": "editor-terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal to learn and execute commands.\u001b[m\r\n"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "docker-node"
   },
   "assets": {
-    "client": [
+    "host": [
       {
         "file": ".dockerignore",
         "target": "~/"
