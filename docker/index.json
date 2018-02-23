@@ -26,17 +26,5 @@
   },
   "backend": {
     "imageid": "docker-node"
-  },
-  "assets": {
-    "host": [
-      {
-        "file": ".dockerignore",
-        "target": "~/"
-      },
-      {
-        "file": "Dockerfile",
-        "target": "~/"
-      }
-    ]
   }
 }

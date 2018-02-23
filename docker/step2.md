@@ -4,7 +4,11 @@ You may find the reference documentation helpful: https://docs.docker.com/engine
 
 #### Write the Dockerfile
 
-In the top window, select `Dockerfile` and click on it to open in the built-in editor.
+First, we'll create an empty file:
+
+`touch Dockerfile`{{execute}}
+
+In the top (file browse) pane, click the refresh icon (looks like a circle), expand the `acd_docker_workshop`. Select `Dockerfile` and click on it to open in the built-in editor.
 
 You may wish to use this as a starting point:
 
@@ -21,10 +25,6 @@ FROM node:9.5.0
 Note that you don't have to click Save, the editor will automatically save the file as you write it.
 
 #### Create the docker image
-
-Once you've finished writing the `Dockerfile`, change directory to the location of the Dockerfile.
-
-`cd ..`{{execute}}
 
 Enter the Docker command to build the image in the Terminal. Tag your image with your Docker Hub account name, your image name (call it `acdfortune`) and a version (e.g. `v1`).
 
