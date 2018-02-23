@@ -6,13 +6,16 @@
     "details": {
         "steps": [
             {
-                "title": "Running the Jupyter notebook",
+                "title": "Installing Keras",
                 "text": "step1.md"
+            },
+            {
+                "title": "Running the Jupyter notebook",
+                "text": "step2.md"
             }
         ],
         "intro": {
             "text": "intro.md",
-            "courseData": "courseBase.sh",
             "credits": ""
         },
         "finish": {
