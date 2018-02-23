@@ -2,17 +2,11 @@ In this workshop, you will containerize the Node.js application.
 
 You may find the reference documentation helpful: https://docs.docker.com/engine/reference/commandline/cli/
 
-#### Create a new Dockerfile
-
-First, create an empty Dockerfile:
-
-`touch Dockerfile`{{execute}}
-
 #### Write the Dockerfile
 
-In the top window, click the Refresh button (circular double arrows) to refresh the folder view. Expand the `acd_docker_workshop` folder, select `Dockerfile` and click on it to open in the built-in editor.
+In the top window, select `Dockerfile` and click on it to open in the built-in editor.
 
-You can use this as a starting point:
+You may wish to use this as a starting point:
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">
 # This is your Editor pane. Write the Dockerfile here and 
@@ -28,13 +22,15 @@ Note that you don't have to click Save, the editor will automatically save the f
 
 #### Create the docker image
 
-Once you've finished writing the `Dockerfile`, enter the Docker command to build the image in the Terminal. 
+Once you've finished writing the `Dockerfile`, change directory to the location of the Dockerfile.
 
-Tag your image with your Docker Hub account name, your image name and a version. 
+`cd ..`{{execute}}
+
+Enter the Docker command to build the image in the Terminal. Tag your image with your Docker Hub account name, your image name (call it `acdfortune`) and a version (e.g. `v1`).
 
 #### Run the docker image
 
-Run the image that you have just built. Call it acdfortune. Bind the container’s port to 8080 on the host. 
+Run the image that you have just built. Bind the container’s port to 8080 on the host. 
 
 #### View the running container
 

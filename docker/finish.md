@@ -1,1 +1,1 @@
-You've completed your first Katacoda scenario!
+Congratulations. You've completed creating and deploying a docker container!

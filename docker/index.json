@@ -27,5 +27,17 @@
   },
   "backend": {
     "imageid": "docker-node"
+  },
+  "assets": {
+    "client": [
+      {
+        "file": ".dockerignore",
+        "target": "~/"
+      },
+      {
+        "file": "Dockerfile",
+        "target": "~/"
+      }
+    ]
   }
 }
