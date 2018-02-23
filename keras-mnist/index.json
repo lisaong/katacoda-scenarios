@@ -1,6 +1,8 @@
 {
     "title": "Deepschool.io - Keras Neural Nets",
     "description": "This scenario demonstrates Neural Networks using Keras.",
+    "difficulty": "beginner",
+    "time": "20 minutes",
     "details": {
         "steps": [
             {
