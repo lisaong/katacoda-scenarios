@@ -1,5 +1,3 @@
-### Launch Jupyter
-
 Click on this link to launch Jupyter:
 https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
 

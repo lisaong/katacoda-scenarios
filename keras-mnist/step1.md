@@ -1,5 +1,3 @@
-### Install Keras
-
 We will launch a docker container with a [keras image](https://hub.docker.com/r/lisaong/jupyter-keras-cpu-py3/). The image is hosted on *Docker hub* and has already been downloaded to this environment.
 
 Run the following command in the Terminal:
