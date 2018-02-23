@@ -22,7 +22,7 @@
     },
     "environment": {
         "showdashboard": true,
-        "dashboard": "Jupyter",
+        "dashboards": [{"name": "Jupyter", "port": 8888}],
         "uilayout": "terminal-iframe"
     }
 }

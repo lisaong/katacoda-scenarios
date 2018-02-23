@@ -4,7 +4,7 @@ We will launch a docker container with a [keras image](https://hub.docker.com/r/
 
 Run the following command in the Terminal:
 
-`docker run -d -p=6006:6006 -p=8888:8888 -v:/:/srv gw000/keras-full`{{execute}}
+`docker run -d -p=6006:6006 -p=8888:8888 -v:/home/scrapbook/tutorial:/srv gw000/keras-full`{{execute}}
 
 This command takes a while to run the first time, because it will download the docker image containing Keras and Jupyter. Once download is complete, the docker image will run, which launches a Jupyter notebook server.
 
