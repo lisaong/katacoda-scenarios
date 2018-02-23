@@ -26,8 +26,6 @@
         "imageid": "docker"
     },
     "environment": {
-        "showdashboard": true,
-        "dashboards": [{"name": "Jupyter", "port": 8888}],
-        "uilayout": "terminal-iframe"
+        "uilayout": "terminal"
     }
 }

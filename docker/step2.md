@@ -7,6 +7,7 @@ You may find the reference documentation helpful: https://docs.docker.com/engine
 First, we'll create two empty files:
 
 `touch Dockerfile`{{execute}}
+
 `touch .dockerignore`{{execute}}
 
 In the top (file browse) pane, click the refresh icon (looks like a circle), expand the `acd_docker_workshop`. Select `Dockerfile` and click on it to open in the editor.
