@@ -16,5 +16,9 @@ In this step, you will clone, deploy, and run a Node.js application.
 
 `node main.js`{{execute}}
 
-The application will be listening on port 3000. You can visit it via the URL:
+The application will be listening on port 3000. You can visit it by clicking on this link:
 https://[[CLIENT_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
+
+#### Stop the Node application
+
+In the terminal window, do `Ctrl+C` to stop the node process. Next, we will walk through how to run the same application in a container.

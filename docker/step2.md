@@ -1,8 +1,6 @@
-In this step, you will containerize the Node.js application.
+In this workshop, you will containerize the Node.js application.
 
-#### Stop the Node application
-
-In the terminal window, do `Ctrl+C` to stop the node process. Instead, we will walk through how to run the same application in a container.
+You may find the reference documentation helpful: https://docs.docker.com/engine/reference/commandline/cli/
 
 #### Create a new Dockerfile
 
@@ -10,7 +8,7 @@ First, create an empty Dockerfile:
 
 `touch Dockerfile`{{execute}}
 
-#### Author the Dockerfile
+#### Write the Dockerfile
 
 In the top window, click the Refresh button (circular double arrows) to refresh the folder view. Expand the `acd_docker_workshop` folder, select `Dockerfile` and click on it to open in the built-in editor.
 
@@ -26,28 +24,31 @@ FROM node:9.5.0
 
 </pre>
 
-Note that you don't have to click Save, the editor will automatically save the file.
+Note that you don't have to click Save, the editor will automatically save the file as you write it.
 
 #### Create the docker image
 
-Once the `Dockerfile` is completed, create the docker image. Replace `myusername` with an account name (no spaces or special characters) for yourself. We won't be uploading this to Docker Hub, so you can pick any name for now.
+Once you've finished writing the `Dockerfile`, enter the Docker command to build the image in the Terminal. 
 
-`v1` is the version number.
-
-`docker build -t myusername/acdfortune:v1 .`{{execute}}
+Tag your image with your Docker Hub account name, your image name and a version. 
 
 #### Run the docker image
 
-`docker run -d myusername/acdfortune:v1`{{execute}}
+Run the image that you have just built. Call it acdfortune. Bind the container’s port to 8080 on the host. 
 
-The docker container will be listening on port 8080. You can visit it via the URL:
+#### View the running container
+
+Enter the Docker command to view your container in the Terminal.
+
+#### Test the docker
+
+Test the deployed application by clicking this link:
 https://[[CLIENT_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
-#### Delete the docker image
+#### Delete the container
 
-As an exercise, see if you can figure out how to:
-* list running docker containers
-* stop the docker container
-* delete the docker container
+Enter the Docker command(s) to delete the `acdfortune` container in the Terminal.
 
-You may find the reference documentation helpful: https://docs.docker.com/engine/reference/commandline/cli/
+#### Upload to DockerHub
+
+Share your image with the world. Push your image to Docker Hub.
