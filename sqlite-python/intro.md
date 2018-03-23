@@ -17,6 +17,3 @@ SQLite is the most widely deployed SQL database engine in the world. The source 
 It is a self-contained, serverless, zero-configuration, transactional SQL database engine. The SQLite project is sponsored by Bloomberg and Mozilla.
 
 In this tutorial, you will be running in an environment that has Python SQLite support pre-installed.
-
-#### Credits
-This tutorial is adapted from https://pythonspot.com/python-database-programming-sqlite-tutorial/
