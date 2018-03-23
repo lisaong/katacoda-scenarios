@@ -13,6 +13,9 @@ The `Jobs` table contains a foreign key, `Uid`, which is linked to the `Id` colu
 The script below will create a new database called test2.db. *Replace* the contents of `create.py` with the following code:
 
 <pre class="file" data-filename="create.py" data-target="replace">
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import sqlite3 as lite
 import sys
 
@@ -56,8 +59,7 @@ One the database is created, we'll use python to query the database contents.
 import sqlite3 as lite
 import sys
 
-
-con = lite.connect('user.db')
+con = lite.connect('test_foreign.db')
 
 with con:
 
@@ -89,7 +91,7 @@ with con:
     cur = con.cursor()
 
     # Insert a job that has an invalid user id.
-    cur.execute("INSERT INTO Jobs VALUES(5,99,'Troublemaker')")
+    cur.execute("INSERT INTO Jobs VALUES(4,999,'Database Engineer')")
 </pre>
 
 Run the script to create a database:
