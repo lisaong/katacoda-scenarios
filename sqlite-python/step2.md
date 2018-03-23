@@ -107,7 +107,7 @@ with con:
     cur = con.cursor()
 
     # Insert a job that has an invalid user id.
-    cur.execute("INSERT INTO Jobs VALUES(4,999,'Database Engineer')")
+    cur.execute("INSERT INTO Jobs VALUES(4,'Database Engineer',999)")
 
     # Query the users and jobs again
     cur.execute("SELECT users.name, jobs.profession FROM jobs INNER JOIN users ON users.ID = jobs.uid")
@@ -127,7 +127,7 @@ This should fail:
 ```
 Traceback (most recent call last):
   File "create.py", line 26, in <module>
-    cur.execute("INSERT INTO Jobs VALUES(4,'Developer',999)")
+    cur.execute("INSERT INTO Jobs VALUES(4,'Database Engineer',999)")
 sqlite3.IntegrityError: FOREIGN KEY constraint failed
 ```
 
