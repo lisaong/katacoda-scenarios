@@ -2,17 +2,17 @@ In this step, you will create and insert data into a new database.
 
 #### Create database
 
-The script below will store data into a new database called `user.db`.
+The script below will store data into a new database called `test.db`.
 
-Copy or type this code into `app.py`.
+Copy or type this code into `create.py`.
 
-<pre class="file" data-filename="app.py" data-target="replace">
-!/usr/bin/python
+<pre class="file" data-filename="create.py" data-target="replace">
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import sqlite3 as lite
 import sys
 
-con = lite.connect('user.db')
+con = lite.connect('test.db')
 
 with con:
     cur = con.cursor()
@@ -38,22 +38,22 @@ The first value is the ID. The second value is the name.  Once we run the script
 
 Run the script to create a database:
 
-`python app.py`{{execute}}
+`python create.py`{{execute}}
 
 #### Querying data
 
 One the database is created, we'll use python to query the database contents.
 
-Replace `app.py` with the code below:
+Copy or Type the code below to `query.py`:
 
-<pre class="file" data-filename="app.py" data-target="replace">
+<pre class="file" data-filename="query.py" data-target="replace">
 
-!/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import sqlite3 as lite
 import sys
 
-con = lite.connect('user.db')
+con = lite.connect('test.db')
 
 with con:
     cur = con.cursor()
@@ -67,9 +67,16 @@ with con:
 
 This will output all data in the Users table from the database. 
 
-Note that you should delete the INSERT statements from the earlier section, because the table has already been created. Otherwise, you'll see an SQLite error.
+Note: we are using a different file `query.py` so that we don't re-run the INSERT statements from above, because the table has already been created. Otherwise, you'll see an SQLite error.
 
 Run the script to query the database contents:
 
-`python app.py`{{execute}}
+`python query.py`{{execute}}
 
+You should see something like
+
+```
+(1, u'Michelle')
+(2, u'Sonya')
+(3, u'Greg')
+```

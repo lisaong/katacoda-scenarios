@@ -21,7 +21,8 @@
     }
   },
   "files": [
-    "app.py"
+    "create.py",
+    "query.py"
   ],
   "environment": {
     "uilayout": "editor-terminal"
