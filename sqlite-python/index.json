@@ -1,0 +1,29 @@
+{
+  "title": "Python SQLite Workshop",
+  "description": "Python SQLite Workshop",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [{
+      "title": "Step 1 - Create and insert",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - Foreign keys",
+      "text": "step2.md"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": "Based on https://pythonspot.com/python-database-programming-sqlite-tutorial/"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "bash"
+  }
+}
