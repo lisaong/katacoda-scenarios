@@ -65,4 +65,11 @@ with con:
         print row
 </pre>
 
-This will output all data in the Users table from the database. Note that you should not repeat the INSERT statements from the earlier section, because the table has already been created.
+This will output all data in the Users table from the database. 
+
+Note that you should delete the INSERT statements from the earlier section, because the table has already been created. Otherwise, you'll see an SQLite error.
+
+Run the script to query the database contents:
+
+`python app.py`{{execute}}
+
