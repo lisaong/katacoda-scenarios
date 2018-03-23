@@ -18,16 +18,11 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "client": [
-        {
-          "file": "app.py",
-          "target": "~/"
-        }
-      ]
     }
   },
+  "files": [
+    "app.py"
+  ],
   "environment": {
     "uilayout": "editor-terminal"
   },
