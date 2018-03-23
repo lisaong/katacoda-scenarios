@@ -25,6 +25,9 @@ with con:
 
     cur = con.cursor()
 
+    # Enable foreign key support
+    cur.execute("PRAGMA foreign_keys = 1")
+
     # Create Users table
     cur.execute("CREATE TABLE Users(Id INTEGER PRIMARY KEY, Name TEXT)")
     cur.execute("INSERT INTO Users VALUES(1,'Michelle')")
@@ -33,10 +36,10 @@ with con:
     cur.execute("INSERT INTO Users VALUES(4,'Laura')")
 
     # Create Jobs table, with foreign key Uid that references Users.Id
-    cur.execute("CREATE TABLE Jobs(Id INTEGER PRIMARY KEY, Uid INTEGER, Profession TEXT, FOREIGN KEY(Uid) REFERENCES Users(Id))")
-    cur.execute("INSERT INTO Jobs VALUES(1,1,'Scientist')")
-    cur.execute("INSERT INTO Jobs VALUES(2,2,'Marketeer')")
-    cur.execute("INSERT INTO Jobs VALUES(3,3,'Developer')")
+    cur.execute("CREATE TABLE Jobs(Id INTEGER PRIMARY KEY, Profession TEXT, Uid INTEGER, FOREIGN KEY(Uid) REFERENCES Users(Id))")
+    cur.execute("INSERT INTO Jobs VALUES(1,'Scientist',1)")
+    cur.execute("INSERT INTO Jobs VALUES(2,'Marketeer',2)")
+    cur.execute("INSERT INTO Jobs VALUES(3,'Developer',3)")
 </pre>
 
 This line creates the `Jobs` table, with the foreign key constraint: 
@@ -51,6 +54,8 @@ Run the script to create a database:
 #### Querying data
 
 One the database is created, we'll use python to query the database contents.
+
+*Replace* the contents of `query.py` with the following code:
 
 <pre class="file" data-filename="query.py" data-target="replace">
 #!/usr/bin/python
@@ -72,15 +77,26 @@ with con:
         print row
 </pre>
 
-This will output all data in the Users table from the database.
+`python query.py`{{execute}}
+
+This will output the users and their jobs from both tables.
+
+```
+(u'Michelle', u'Scientist')
+(u'Howard', u'Marketeer')
+(u'Greg', u'Developer')
+```
 
 #### Testing foreign key constraint
 
-We will test the foreign key constraint by inserting a job that has an invalid user id. 
+We will test the foreign key constraint by inserting a job that has an *invalid* user id.
 
 *Replace* the code in `query.py` with the following code (delete the old code):
 
 <pre class="file" data-filename="query.py" data-target="replace">
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import sqlite3 as lite
 import sys
 
@@ -92,11 +108,27 @@ with con:
 
     # Insert a job that has an invalid user id.
     cur.execute("INSERT INTO Jobs VALUES(4,999,'Database Engineer')")
+
+    # Query the users and jobs again
+    cur.execute("SELECT users.name, jobs.profession FROM jobs INNER JOIN users ON users.ID = jobs.uid")
+
+    rows = cur.fetchall()
+
+    for row in rows:
+        print row
 </pre>
 
-Run the script to create a database:
+Run the script again:
 
-`python query.py`{{execute}}
+`python3 query.py`{{execute}}
 
-You should see an error. Do you know why this is the case? Can you fix the query?
+This should fail:
 
+```
+Traceback (most recent call last):
+  File "create.py", line 26, in <module>
+    cur.execute("INSERT INTO Jobs VALUES(4,'Developer',999)")
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+```
+
+Do you know why this is the case? Can you fix `query.py` so that it will work?

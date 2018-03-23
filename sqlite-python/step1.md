@@ -38,7 +38,7 @@ The first value is the ID. The second value is the name.  Once we run the script
 
 Run the script to create a database:
 
-`python create.py`{{execute}}
+`python3 create.py`{{execute}}
 
 #### Querying data
 
@@ -71,7 +71,7 @@ Note: we are using a different file `query.py` so that we don't re-run the INSER
 
 Run the script to query the database contents:
 
-`python query.py`{{execute}}
+`python3 query.py`{{execute}}
 
 You should see something like
 
