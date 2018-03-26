@@ -120,7 +120,7 @@ with con:
 
 Run the script again:
 
-`python3 query.py`{{execute}}
+`python query.py`{{execute}}
 
 This should fail:
 
