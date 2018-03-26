@@ -4,16 +4,6 @@
   "difficulty": "beginner",
   "time": "20 minutes",
   "details": {
-    "assets" : {
-      "client" : [{
-        "file" : "users.csv",
-        "target" : "/home/scrapbook"
-      },
-      {
-        "file" : "jobs.csv",
-        "target" : "/home/scrapbook"
-      }]
-    },
     "intro": {
       "text": "intro.md",
       "credits": "Based on https://pythonspot.com/python-database-programming-sqlite-tutorial/",
