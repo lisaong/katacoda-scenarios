@@ -10,7 +10,7 @@ We will create two tables, a `Users` table and a `Jobs` table. The `Users` table
 
 The `Jobs` table contains a foreign key, `Uid`, which is linked to the `Id` column in the `Users` table. By setting this foreign key, we tell SQLite that the `Jobs.Uid` column must contain ids from the `Users.Id` column.
 
-The script below will create a new database called test2.db. *Replace* the contents of `create.py` with the following code:
+The script below will create a new database called test2.db. **Replace** the contents of `create.py` with the following code:
 
 <pre class="file" data-filename="create.py" data-target="replace">
 #!/usr/bin/python
@@ -53,9 +53,9 @@ Run the script to create a database:
 
 #### Querying data
 
-One the database is created, we'll use python to query the database contents.
+Once the database is created, we'll use python to query the database contents.
 
-*Replace* the contents of `query.py` with the following code:
+**Replace** the contents of `query.py` with the following code:
 
 <pre class="file" data-filename="query.py" data-target="replace">
 #!/usr/bin/python
@@ -91,7 +91,7 @@ This will output the users and their jobs from both tables.
 
 We will test the foreign key constraint by inserting a job that has an *invalid* user id.
 
-*Replace* the code in `query.py` with the following code (delete the old code):
+**Replace** the code in `query.py` with the following code (delete the old code):
 
 <pre class="file" data-filename="query.py" data-target="replace">
 #!/usr/bin/python

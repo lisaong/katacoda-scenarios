@@ -11,10 +11,15 @@
     {
       "title": "Step 2 - Foreign keys",
       "text": "step2.md"
+    },
+    {
+      "title": "Step 3 - Import from CSV",
+      "text": "step3.md"
     }],
     "intro": {
       "text": "intro.md",
-      "credits": "Based on https://pythonspot.com/python-database-programming-sqlite-tutorial/"
+      "credits": "Based on https://pythonspot.com/python-database-programming-sqlite-tutorial/",
+      "courseData": "env-init.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -24,6 +29,16 @@
     "create.py",
     "query.py"
   ],
+  "assets" : {
+    "client" : [{
+      "file" : "users.csv",
+      "target" : "/home/scrapbook"
+    },
+    {
+      "file" : "jobs.csv",
+      "target" : "/home/scrapbook"
+    }]
+  },
   "environment": {
     "uilayout": "editor-terminal"
   },
