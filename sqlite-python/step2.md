@@ -106,6 +106,9 @@ with con:
 
     cur = con.cursor()
 
+    # Enable foreign key support
+    cur.execute("PRAGMA foreign_keys = 1")
+
     # Insert a job that has an invalid user id.
     cur.execute("INSERT INTO Jobs VALUES(4,'Database Engineer',999)")
 
