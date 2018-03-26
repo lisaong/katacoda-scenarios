@@ -31,11 +31,11 @@
   ],
   "assets" : {
     "client" : [{
-      "file" : "users.csv",
+      "file" : "assets/users.csv",
       "target" : "/home/scrapbook"
     },
     {
-      "file" : "jobs.csv",
+      "file" : "assets/jobs.csv",
       "target" : "/home/scrapbook"
     }]
   },

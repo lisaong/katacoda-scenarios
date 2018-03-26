@@ -4,7 +4,7 @@ In this step, you will learn about importing CSV data into an SQLite database.
 
 While dealing with CSV data is simple, importing data to SQLite is helpful when you have a large amount of data, especially data from multiple CSV files.
 
-There are several helper libraries and examples available for importing data from CSV. In this tutorial, we will try the simple `csv2sqlite` library.
+There are several helper libraries and examples available for importing data from CSV. In this tutorial, we will try the simple `csv2sqlite` library (https://github.com/rufuspollock/csv2sqlite).
 
 First, run the following command to import `users.csv` into the `users` table. This will also create a new SQLite database file called `test_import.db`.
 
@@ -51,3 +51,8 @@ You may notice that the CSV importer script, `csv2sqlite`, does not define a for
 Once a table is created, SQLite does not support altering that table to add a foreign key constraint. This is a limitation of SQLite's `ALTER TABLE` functionality.
 
 The lack of foreign key will not affect your ability to do queries like the `INNER JOIN` above. Foreign keys are enforced at `INSERT` time. This is OK as long as you ensure that your CSV data is set up properly, where the `Uid` entries in `jobs.csv` refer to a valid `Id` entry in `users.csv`.
+
+### Writing your own CSV importer
+Rather than using the `csv2sqlite` library, you can also write a simple importer in python that uses the built-in `csv` python module. This will allow you to customize the behaviour of the importer, including defining foreign key relationships.
+
+For an example, see: http://adamantine.me/2017/05/22/how-to-write-data-to-a-sqlite-database-in-python/
